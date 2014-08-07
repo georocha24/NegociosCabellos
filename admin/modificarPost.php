@@ -5,6 +5,16 @@ session_start();
 if($_SESSION['Auth'] != "1"){  
 header('index.php?ErrorLogin=sjbdu212');
 }else{
+  if(isset($_GET['IdPost'])){
+    $queryEditar = sprintf("SELECT * FROM post WHERE IdPost = %d", $_GET['IdPost']);
+    if ($Editar = $mysqli->query($queryEditar)) {
+      $rowEditar = mysqli_fetch_assoc($Editar);
+    }else{
+      die(print("Error: ".$mysqli->error));
+    }
+  }else{
+    die(print("No se ha elegido un Post. Vuelva atras."));
+  }
 ?>
 
 <!DOCTYPE html>
@@ -126,29 +136,30 @@ header('index.php?ErrorLogin=sjbdu212');
         <!--<form class="form-signin"   method="post">-->
           <!--<h3>Usuarios</h3> onsubmit="return valida(this)"-->
 
-                          <form class="form-signin" action="adminNuevoPost.php" enctype="multipart/form-data"  method="post" >
+                          <form class="form-signin" action="adminEditarPost.php" enctype="multipart/form-data"  method="post" >
                             <h3>Llenar campos de Usuario</h3> 
                             <hr>
                               <table >
                                 <tr>
                                   <td>
                                     <h2 class="form-signin-heading" for="txtTitulo">Titulo:</h2>
-                                    <input type="text" class="input-block-level" name="txtTitulo" id="txtTitulo" placeholder="Titulo del Post" required></td>
+                                    <input type="text" class="input-block-level" name="txtTitulo" id="txtTitulo" placeholder="Titulo del Post" value=<?php printf('"%s"', $rowEditar['Titulo']); ?> required></td>
                                 </tr>
                                 <tr>
                                   <td><h2 class="form-signin-heading" for="txtResumen">Resumen:</h2>
-                                  <textarea name="txtResumen" class="input-block-level" id="txtResumen" rows="5" placeholder="Resumen del Post aqui..." ></textarea></td>
+                                  <textarea name="txtResumen" class="input-block-level" id="txtResumen" rows="5" placeholder="Resumen del Post aqui..." ><?php printf($rowEditar['Cuerpo']); ?></textarea></td>
                                 </tr>
 
                                 <tr>
                                   <td><h2 class="form-signin-heading" for="txtImagen">Subir Imagen:</h2>
-                                  <input id="uploadfile" name="uploadfile" size="30" type="file" /></td>
+                                  <input id="uploadfile" name="uploadfile" size="30" type="file" required /></td>
                                 </tr>
                               </table>
                               <tr>
                                 <br>
                               </tr>
-                              <input type = "submit" class="btn btn-success btn-large" value = "Guardar">
+                              <input type="text" name="IdPost" id="IdPost" value=<?php printf('"%d"', $rowEditar['IdPost']); ?>>
+                              <input type = "submit" class="btn btn-success btn-large" value = "Modificar">
                           </form>
        
 

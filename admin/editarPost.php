@@ -2,16 +2,23 @@
 require_once('conexion/conexion.php');
 
 session_start();
-if($_SESSION['Auth'] != "1"){  
+
+if($_SESSION['Auth'] != "1"){
 header('index.php?ErrorLogin=sjbdu212');
 }else{
+  $queryEditar = "SELECT * FROM post";
+  if ($Editar = $mysqli->query($queryEditar)) {
+    $rowEditar = mysqli_fetch_assoc($Editar);
+  }else{
+    die(print("Error: ".$mysqli->error));
+  }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Negocios Cabellos | Registro Usuario</title>
+    <title>Negocios Cabellos | Eliminar Usuario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -112,79 +119,46 @@ header('index.php?ErrorLogin=sjbdu212');
 
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="PanelControl.php">Ir a Menu Principal</a></li>
+          <li class="active icon-wrench icon-white"><a href="PanelControl.php">Ir a Menu Principal</a></li>
           
         </ul>
-        <h3 class="muted"><img width="150px" height="70px" src="../img/logo/logo2.png">|Registra Usuario</h3>
+        <h3 class="muted"><img width="150px" height="70px" src="../img/logo/logo2.png">|Eliminar Usuario</h3>
       </div>
-
-      
-
-     
-
-      
-        <!--<form class="form-signin"   method="post">-->
-          <!--<h3>Usuarios</h3> onsubmit="return valida(this)"-->
-
-                          <form class="form-signin" action="adminNuevoPost.php" enctype="multipart/form-data"  method="post" >
-                            <h3>Llenar campos de Usuario</h3> 
-                            <hr>
-                              <table >
-                                <tr>
-                                  <td>
-                                    <h2 class="form-signin-heading" for="txtTitulo">Titulo:</h2>
-                                    <input type="text" class="input-block-level" name="txtTitulo" id="txtTitulo" placeholder="Titulo del Post" required></td>
-                                </tr>
-                                <tr>
-                                  <td><h2 class="form-signin-heading" for="txtResumen">Resumen:</h2>
-                                  <textarea name="txtResumen" class="input-block-level" id="txtResumen" rows="5" placeholder="Resumen del Post aqui..." ></textarea></td>
-                                </tr>
-
-                                <tr>
-                                  <td><h2 class="form-signin-heading" for="txtImagen">Subir Imagen:</h2>
-                                  <input id="uploadfile" name="uploadfile" size="30" type="file" /></td>
-                                </tr>
-                              </table>
-                              <tr>
-                                <br>
-                              </tr>
-                              <input type = "submit" class="btn btn-success btn-large" value = "Guardar">
-                          </form>
-       
-
-      <!--</form>-->
-      
-      
-
-      <hr>
+        
+          <section class="tablapost">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Titulo</th>
+                  <th>Descripcion</th>
+                  <th>Fecha</th>
+                  <th>Imagen</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php do{ ?>
+                <tr>
+                  <td><?php printf("%s", $rowEditar['Titulo']); ?></td>
+                  <td><?php printf("%s", $rowEditar['Cuerpo']); ?></td>
+                  <td><?php printf("%s", $rowEditar['Fecha']); ?></td>
+                  <!--<td><?php //printf("%s", $rowEditar['Fecha']); ?></td>-->
+                  <td><img src="../image/<?php echo $rowEditar['imagen'] ?>" width=100px></td>
+                  <td><center><a class="btn btn-danger" href=<?php printf("adminEliminarUsuario.php?IdPost=%s", $rowEditar['IdPost']); ?>><span> Eliminar</a></center></td>
+                  <td><center><a class="btn btn-info" href=<?php printf("modificarPost.php?IdPost=%s", $rowEditar['IdPost']); ?>><span>Editar</a></center></td>
+                </tr>
+                <?php }while($rowEditar = mysqli_fetch_assoc($Editar)); ?>
+              </tbody>
+            </table>
+        </section>
 
       <div class="footer">
         <p>&copy; Company 2013</p>
       </div>
 
-    </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap-transition.js"></script>
-    <script src="js/bootstrap-alert.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
-    <script src="js/bootstrap-dropdown.js"></script>
-    <script src="js/bootstrap-scrollspy.js"></script>
-    <script src="js/bootstrap-tab.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap-popover.js"></script>
-    <script src="js/bootstrap-button.js"></script>
-    <script src="js/bootstrap-collapse.js"></script>
-    <script src="js/bootstrap-carousel.js"></script>
-    <script src="js/bootstrap-typeahead.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/validarletras.js"></script>
+    </div> 
 
 
   </body>
 </html>
-
 <?php } ?>

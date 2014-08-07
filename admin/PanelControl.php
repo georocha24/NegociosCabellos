@@ -47,7 +47,7 @@ header('refresh:1;url=404.html');
                                 Posts <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="nuevoPost.php">Agregar un nuevo post</a></li>
-                                <li><a href="#">Page Two</a></li>
+                                <li><a href="editarPost.php">Editar/Eliminar Post</a></li>
                                 <li><a href="#">Page Three</a></li>
                             </ul>
                         </li>
