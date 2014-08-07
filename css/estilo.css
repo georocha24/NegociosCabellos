@@ -1,0 +1,263 @@
+body{
+	font-family: Arial, sans-serif;
+	font: normal normal normal 16px/1.3em 'Times new roman';
+	padding-top: 0px;
+	background-image: url(../img/fondo/textura.png);
+	background-position: 0% 0%; 
+	background-color: rgb(26, 56, 10); 
+	background-position: fixed;
+}
+
+#contenedor{
+	border-radius: 5px;
+	margin: 0 auto;
+	padding: 0 auto;
+	width: 1000px;
+}
+
+header{
+	display: inline-block;
+	margin: 0 auto;
+	padding-bottom: 1%;
+	width: 1000px;	
+}
+
+#baner1{
+	border: solid 1 rgb(170, 149, 80);
+}
+
+#banda_superior{
+	background: rgba(0,0,0,0.8);
+	border: solid 1 rgb(170, 149, 80);
+	margin: 0 auto;
+	position: absolute;
+	height: 70px;
+	top: 5%;
+	width: 1000px;
+}
+
+#logo{
+	float: left;
+	height: 280px;
+	margin-top: 0%;
+	position: absolute;
+}
+
+#lema{
+	color: rgb(170, 149, 80);
+	float: right;
+	font-family: Lucida Handwriting;
+	font-size: 200%;
+	font-style: italic;
+	margin-top: 1.5%;
+	margin-right: 1%;
+}
+
+#menu{
+	background: rgba(0,0,0,0.95);
+	border: solid 1 rgb(170, 149, 80);
+	font-family: Times;
+	margin-top: 0%;
+	margin-bottom: 1%;
+	width: 1000px;
+}
+
+.nav{
+	border: solid 1;
+	margin: 0px;
+	font: normal normal bold 17px/1.3em times new roman;
+	text-align: center;
+}
+
+.nav li a{
+	color: rgb(170, 149, 80);
+	display: block;
+	text-decoration: none;
+	font-style: bold;
+	margin: 0 auto;
+	padding-top: 5%;	
+	padding-bottom: 5%;
+}
+
+.nav li a:hover{
+	color: rgb(256, 256, 180);
+	font-style: bold;
+}
+
+.nav > li{
+	display: inline-block;
+	padding: 0% 2% 0% 2%;
+}
+
+.nav li ul{
+	display: none;
+	position: absolute;
+	min-width: 200px;
+}
+.nav li ul li{
+	border: solid 1 rgb(170, 149, 80);
+	background-color: rgba(0,0,0,0.95);
+	list-style-type: none;
+	text-align: center;
+}
+
+.nav li:hover > ul{
+	display: block;
+}
+
+.barras{
+	color: rgb(170, 149, 80);
+	font-size: 150%/1.3em;
+	margin: 0%;
+	padding: 0px;
+}
+
+#contenedor1{
+	background: rgba(0,0,0,0.5);
+	clear: both;
+	width: 100%:;
+}
+
+.der1{
+	display: inline-block;
+	float: right;
+	text-align: justify;
+	width: 24.5%;
+}
+
+.imgder{
+	border: solid 1 rgb(170, 149, 80);
+	margin: 10% 10% 0% 10%; 
+	width: 80%;
+}
+
+h3{
+	color: rgb(198, 186, 146);
+	font: normal normal normal 45px/1.3em Brush Script MT;
+	margin-top: 1%;
+	padding: 0%;
+}
+h4{
+	color: rgb(198, 186, 146);
+	font: normal normal normal 16px/1.3em 'times new roman', times, serif;
+	margin: 0 auto;
+	padding: 0% 7% 7% 7%;
+}
+h5{
+	color: rgb(198, 186, 146);
+	font: normal normal normal 25px/1.3em Brush Script MT;
+	margin-top: 40%;
+	padding: 0%;
+}
+
+#subtitulo{
+	font: normal normal normal 20px/1.3em 'times new roman', times, serif;
+	margin: 0 auto;
+
+}
+
+.iz1{
+	border-right: solid 1;
+	display: inline-block;
+	color: rgb(170, 149, 80);
+	text-align: justify;
+	width: 75%;
+}
+
+.der2{
+	border-right: solid 1;
+	display: inline-block;
+	color: rgb(170, 149, 80);
+	text-align: justify;
+	width: 24.5%;
+}
+
+.iz2{
+	display: inline-block;
+	text-align: justify;
+	width: 75%;
+}
+
+.der3{
+	display: inline-block;
+	color: rgb(170, 149, 80);
+	text-align: justify;
+	vertical-align: top;
+	width: 34.5%;
+}
+
+.iz3{
+	display: inline-block;
+	text-align: justify;
+	vertical-align: top;
+	width: 65%;
+}
+.iz4{
+	display: inline-block;
+	color: rgb(170, 149, 80);
+	text-align: justify;
+	vertical-align: top;
+	width: 33%;
+}
+
+.der4{
+	display: inline-block;
+	text-align: justify;
+	vertical-align: top;
+	width: 65%;
+}
+
+.iz5{
+	display: inline-block;
+	color: rgb(170, 149, 80);
+	text-align: justify;
+	vertical-align: top;
+	width: 24.5%;
+}
+
+.der5{
+	display: inline-block;
+	margin: 0% auto;
+	text-align: justify;
+	width: 74%;
+}
+
+#map_canvas{
+	border: solid 1 rgb(170, 149, 80);
+	height:250px;
+	margin: 12% 5% 2% 5%;
+	width:90%; 
+}
+
+.imgder{
+	border: solid 1 rgb(170, 149, 80);
+	margin: 10% 10% 0% 10%; 
+	width: 80%;
+}
+.imgizqgrande{
+	border: solid 1 rgb(170, 149, 80);
+	margin: 10% 10% 0% 10%; 
+	width: 90%;
+}
+
+#mision_der, #mision_iz1{
+	display: none;
+}
+
+button{
+	border: solid 1 rgb(170, 149, 80);
+	background-color: black;
+	color: rgb(170, 149, 80);
+	margin: 10% 25% 10% 25%;
+	font-size: 100%	
+}
+
+footer{
+	background-color: rgb(132, 118, 70);
+	color: rgb(198, 186, 146);
+	font: normal normal normal 16px/1.3em 'times new roman', times, serif;
+	height: 50px;
+	margin-top: 1%;
+	text-align: center;
+	width: 100%;
+}
