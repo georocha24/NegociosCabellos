@@ -16,7 +16,7 @@ if(isset($_GET['IdPost'])){
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Voz del Silencio || Ver Comentarios</title>
+    <title>Cabellos || Business</title>
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">

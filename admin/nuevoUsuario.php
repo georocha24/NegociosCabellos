@@ -3,7 +3,7 @@ require_once('conexion/conexion.php');
 
 session_start();
 if($_SESSION['Auth'] != "1"){  
-header('index.php?ErrorLogin=sjbdu212');
+header('refresh:1;url=404.html');
 }else{
 ?>
 

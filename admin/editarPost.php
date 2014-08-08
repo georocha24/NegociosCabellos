@@ -15,7 +15,7 @@ header('index.php?ErrorLogin=sjbdu212');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <title>Negocios Cabellos | Eliminar Usuario</title>
@@ -144,7 +144,7 @@ header('index.php?ErrorLogin=sjbdu212');
                   <td><?php printf("%s", $rowEditar['Fecha']); ?></td>
                   <!--<td><?php //printf("%s", $rowEditar['Fecha']); ?></td>-->
                   <td><img src="../image/<?php echo $rowEditar['imagen'] ?>" width=100px></td>
-                  <td><center><a class="btn btn-danger" href=<?php printf("adminEliminarUsuario.php?IdPost=%s", $rowEditar['IdPost']); ?>><span> Eliminar</a></center></td>
+                  <td><center><a class="btn btn-danger" href=<?php printf("adminEliminarPost.php?IdPost=%s", $rowEditar['IdPost']); ?>><span> Eliminar</a></center></td>
                   <td><center><a class="btn btn-info" href=<?php printf("modificarPost.php?IdPost=%s", $rowEditar['IdPost']); ?>><span>Editar</a></center></td>
                 </tr>
                 <?php }while($rowEditar = mysqli_fetch_assoc($Editar)); ?>
