@@ -61,8 +61,8 @@ header('refresh:1;url=404.html');
                                 <li><a href="#">Page Three</a></li>
                             </ul>
                         </li>
-                        <li><a href="#"><i class="icon-pencil icon-black"></i>Cotizaciones</a></li>
-                        <li><a href="#"><i class="icon-file icon-black"></i>Sample 3</a></li>
+                        <!--<li><a href="verComentarios.php"><i class="icon-pencil icon-black"></i>Comentarios</a></li>-->
+                        <li><a href="#"><i class="icon-file icon-black"></i>Cotizaciones</a></li>
 
                     </ul>
 
@@ -116,9 +116,9 @@ header('refresh:1;url=404.html');
     <div class="span2 pull-left">
         <div class="well sidebar-nav">
             <ul class="nav nav-tabs nav-stacked">
-                <li class="nav-header">Navigation</li>
-                <li class="active"><a href="#">Link One</a></li>
-                <li><a href="#">Link Two</a></li>
+                <li class="nav-header">Acceso Rapido</li>
+                <li class="active"><a href="../index.html">Ir || Pagina Principal</a></li>
+                <li><a href="verComentarios.php">Editar/Eliminar Comentarios</a></li>
                 <li><a href="#">Link Three</a></li>
                 <li><a href="#">Link Four</a></li>
             </ul>

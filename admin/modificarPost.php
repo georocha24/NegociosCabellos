@@ -158,7 +158,7 @@ header('index.php?ErrorLogin=sjbdu212');
                               <tr>
                                 <br>
                               </tr>
-                              <input type="text" name="IdPost" id="IdPost" value=<?php printf('"%d"', $rowEditar['IdPost']); ?>>
+                              <input type="hidden" name="IdPost" id="IdPost" value=<?php printf('"%d"', $rowEditar['IdPost']); ?>>
                               <input type = "submit" class="btn btn-success btn-large" value = "Modificar">
                           </form>
        
